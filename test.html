@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Test</title>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="styles.css" rel="stylesheet">
+  </head>
+  <body>
+  
+    <form id="formular">
+      <label>Nachname</label><br>
+      <input type="text" id="nachname"/><br>
+      
+      <label>Vorname</label><br>
+      <input type="text" id="vorname"/><br>
+      
+      <label>Titel</label><br>
+      <input type="text" id="titel"/><br>
+      
+      <label>Soz.Vers.Nr</label><br>
+      <input type="number" id="sozversnr"/><br>
+    
+      <label>Geb. Datum</label><br>
+      <input type="text" id="gebdatum"/><br>
+
+      <label>PLZ</label><br>
+      <input type="number" id="plz"/><br>
+
+      <label>Ort</label><br>
+      <input type="text" id="ort"/><br>
+
+      <label>Straße</label><br>
+      <input type="text" id="strasse"/><br>
+      
+      <label>Feuerwehrnummer</label><br>
+      <input type="number" id="feuerwehrnummer"/><br>
+    
+      <label>Feuerwehr</label><br>
+      <input type="text" id="feuerwehr"/><br>
+
+      <label>Standesbuchnummer</label><br>
+      <input type="number" id="standesbuchnummer"/><br>
+
+      <br>
+
+      <label>Austragungsort, Datum</label><br>
+      <input type="text" id="austragungsortplusdatum"/><br>
+      
+      <br>
+
+      <button type="button" id="start">Start</button>
+    </form>
+
+    <div class="box" id="station1" style="display: none;">
+      <h2>Station 1:</h2>
+      <p>Gehen ohne und mit zwei Kanistern (Zeit 4min) 100m gehen ohne Kanister und 100m gehen mit Kanister (je 16,6 kg)</p>
+      
+      <p class="stationszeit"></p>
+
+      <button class="bestanden" id="bestanden1">Bestanden</button>
+      <button id="nichtbestanden1">Nicht bestanden</button>
+
+    </div>
+
+    <div class="box" id="station2" style="display: none;">
+      <h2>Station 2:</h2>
+      <p>Stufensteigen (etwa 180 Stufen)</p>
+      
+      <p class="stationszeit"></p>
+
+      <button class="bestanden" id="bestanden2">Bestanden</button>
+      <button id="nichtbestanden2">Nicht bestanden</button>
+
+    </div>
+
+    <div class="box" id="station3" style="display: none;">
+      <h2>Station 3:</h2>
+      <p>Hämmern (6kg) eines LKW Reifens (47kg) 3m</p>
+      
+      <p class="stationszeit"></p>
+
+      <button class="bestanden" id="bestanden3">Bestanden</button>
+      <button id="nichtbestanden3">Nicht bestanden</button>
+
+    </div>
+
+    <div class="box" id="station4" style="display: none;">
+      <h2>Station 4:</h2>
+      <p>Unterkriechen und Übersteigen von Hindernissen</p>
+      
+      <p class="stationszeit"></p>
+
+      <button class="bestanden" id="bestanden4">Bestanden</button>
+      <button id="nichtbestanden4">Nicht bestanden</button>
+
+    </div>
+
+    <div class="box" id="station5" style="display: none;">
+      <h2>Station 5:</h2>
+      <p>15m C-52-Druckschlauch einfach einrollen</p>
+      
+      <p class="stationszeit"></p>
+
+      <button class="bestanden" id="bestanden5">Bestanden</button>
+      <button id="nichtbestanden5">Nicht bestanden</button>
+
+    </div>
+
+    <div id="ende" style="display: none;">
+    
+      <!--hier kommt die website hin-->
+      <img class="logo" src="Korpsabzeichen.jpg">
+        <!--h2 id="noelfv"><strong><em>Niederösterreichischer Landesfeuerwehrverband</em></strong></h2>
+      <br><br><br><br><br><br-->
+      <p>Beilage 4c</p>
+      <br><br><br><br>
+      <p class="center"><strong>Jährlicher Leistungstest für Atemschutzgeräteträger</strong><p>
+      <br>
+      <p class="center">gemäß Dienstanweisung 1.5.3 des NÖ Landesfeuerwehrverbandes und der Beilage 1 (Durchführung der Atemschutztauglichkeitsuntersuchung)</p>
+      <br>
+      <p id="daten"></p>
+      <h2>Finnen Test</h2>
+
+      <table>
+        <tr>
+          <th></th>
+          <th class="center">ja</th>
+          <th class="center">nein</th>
+        </tr>
+        <tr>
+          <th>Station 1 erfolgreich bewältigt</th>
+          <td><img class="imagecenter" src="istockphoto-1133442802-612x612.jpg" style="display: none;" id="station1ja"></th>
+          <td><img class="imagecenter" src="1024px-Red_x.svg.png" style="display: none;" id="station1nein"></th>
+        </tr>
+        <tr>
+          <th></th><th></th><th></th>
+        </tr>
+        <tr>
+          <th>Station 2 erfolgreich bewältigt</th>
+          <td><img class="imagecenter" src="istockphoto-1133442802-612x612.jpg" style="display: none;" id="station2ja"></th>
+          <td><img class="imagecenter" src="1024px-Red_x.svg.png" style="display: none;" id="station2nein"></th>
+        <tr>
+          <th></th><th></th><th></th>
+        </tr>
+        <tr>
+          <th>Station 3 erfolgreich bewältigt</th>
+          <td><img class="imagecenter" src="istockphoto-1133442802-612x612.jpg" style="display: none;" id="station3ja"></th>
+          <td><img class="imagecenter" src="1024px-Red_x.svg.png" style="display: none;" id="station3nein"></th>
+        </tr>
+        <tr>
+          <th></th><th></th><th></th>
+        </tr>
+        <tr>
+          <th>Station 4 erfolgreich bewältigt</th>
+          <td><img class="imagecenter" src="istockphoto-1133442802-612x612.jpg" style="display: none;" id="station4ja"></th>
+          <td><img class="imagecenter" src="1024px-Red_x.svg.png" style="display: none;" id="station4nein"></th>
+        </tr>
+        <tr>
+          <th></th><th></th><th></th>
+        </tr>
+        <tr>
+          <th>Station 5 erfolgreich bewältigt</th>
+          <td><img class="imagecenter" src="istockphoto-1133442802-612x612.jpg" style="display: none;" id="station5ja"></th>
+          <td><img class="imagecenter" src="1024px-Red_x.svg.png" style="display: none;" id="station5nein"></th>
+        </tr>
+        <tr>
+          <th></th><th></th><th></th>
+        </tr>
+        <tr>
+          <th>Zeitlimit eingehalten</th>
+          <td><img class="imagecenter" src="istockphoto-1133442802-612x612.jpg" style="display: none;" id="zeitlimitja"></th>
+          <td><img class="imagecenter" src="1024px-Red_x.svg.png" style="display: none;" id="zeitlimitnein"></th>
+        </tr>
+      </table>
+      
+      <br>
+
+      <p id="ortplusdatumfeld">Ort, Datum: <p>
+      <hr>
+      <p>Unterschrift Feuerwehrmitglied:<p>
+      <hr>
+      <p>Unterschrift Sachbearbeiter Feuerwehrmedizinischer Dienst:<p>
+      <hr>
+      <p>Unterschrift Feuerwehrkommandant:<p>
+      <hr>
+    </div>
+
+    <div class="box" id="pause" style="display: none;">
+      <h2>Pause</h2>
+      <p id="naechstestation"></p>
+      <p id="pausenzeit"></p>
+      <button id="ueberspringen">Überspringen</button>
+    </div>
+
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+
+        let station1bestanden;
+        let station2bestanden;
+        let station3bestanden;
+        let station4bestanden;
+        let station5bestanden;
+
+        let seite = 1;
+
+        var verbleibendezeit = 240;
+
+        var uebersprungen = true;
+
+        var pauseset = false;
+
+
+          var elapsed_seconds = 0;
+
+    $(document).ready(function(){
+      $("#start").click(function(){
+
+        let nachname = $("#nachname").val();
+        let vorname = $("#vorname").val();
+        let titel = $("#titel").val();
+        let sozversnr = $("#sozversnr").val();
+        let gebdatum = $("#gebdatum").val();
+        let plz = $("#plz").val();
+        let ort = $("#ort").val();
+        let strasse = $("#strasse").val();
+        let feuerwehrnummer = $("#feuerwehrnummer").val();
+        let standesbuchnummer = $("#standesbuchnummer").val();
+        let feuerwehr = $("#feuerwehr").val();
+        let austragungsortplusdatum = $("#austragungsortplusdatum").val();
+
+        console.log(austragungsortplusdatum);
+
+        if (nachname != "" &&
+          vorname != "" &&
+          titel != "" &&
+          sozversnr != "" &&
+          gebdatum != "" &&
+          plz != "" &&
+          ort != "" &&
+          strasse != "" &&
+          feuerwehrnummer != "" &&
+          feuerwehr != "" &&
+          standesbuchnummer != "" &&
+          austragungsortplusdatum != "") {
+          
+          $("#formular").hide();
+          $("body").prepend("<p class='Timer'></p>")
+          $("body").prepend("<p class='hideme'>" + nachname + " " + vorname + ", " + standesbuchnummer + "</p>");
+
+          $("#daten").append(titel + "<br>" + vorname + " " + nachname + ", SVNR: " + sozversnr + " " + gebdatum + "<br>" + strasse + "<br>" + plz + " " + ort + "<br>Fwnr: " + feuerwehrnummer + ", FF: " + feuerwehr + "<br>Stb.Nr: " + standesbuchnummer);
+          
+              $("#ortplusdatumfeld").append("<strong>" + austragungsortplusdatum + "</strong>");
+
+          setInterval(function() {
+            elapsed_seconds = elapsed_seconds + 1;
+            $('.Timer').text("Gesamtzeit: " + get_elapsed_time_string(elapsed_seconds));
+          }, 1000);
+
+          $("#station1").show();
+
+          setInterval(function() {
+            verbleibendezeit = verbleibendezeit - 1;
+            if (verbleibendezeit < 0) {
+              $(".bestanden").hide();
+            }
+            $('.stationszeit').text("Verbleibende Zeit: " + get_elapsed_time_string(verbleibendezeit));
+          }, 1000);
+
+
+        } else {
+          $("body").append("<p class='warnung'>!!!Nicht vollständig ausgefüllt!!!</p>");
+        }
+
+
+        //$("#formular").hide();
+      });
+
+
+      $("#bestanden1").click(function() {
+        stationfertig = true;
+        station1bestanden = true;
+        pauseset = true;
+        weiterleitung();
+      });
+
+      $("#nichtbestanden1").click(function() {
+        stationfertig = true;
+        station1bestanden = false;
+        pauseset = true;
+        weiterleitung();
+      });
+
+      $("#bestanden2").click(function() {
+        stationfertig = true;
+        station2bestanden = true;
+        pauseset = true;
+        weiterleitung();
+      });
+
+      $("#nichtbestanden2").click(function() {
+        stationfertig = true;
+        station2bestanden = false;
+        pauseset = true;
+        weiterleitung();
+      });
+
+      $("#bestanden3").click(function() {
+        stationfertig = true;
+        station3bestanden = true;
+        pauseset = true;
+        weiterleitung();
+      });
+
+      $("#nichtbestanden3").click(function() {
+        stationfertig = true;
+        station3bestanden = false;
+        pauseset = true;
+        weiterleitung();
+      });
+
+      $("#bestanden4").click(function() {
+        stationfertig = true;
+        station4bestanden = true;
+        pauseset = true;
+        weiterleitung();
+      });
+
+      $("#nichtbestanden4").click(function() {
+        stationfertig = true;
+        station4bestanden = false;
+        pauseset = true;
+        weiterleitung();
+      });
+
+      $("#bestanden5").click(function() {
+        stationfertig = true;
+        station5bestanden = true;
+        weiterleitung();
+      });
+
+      $("#nichtbestanden5").click(function() {
+        stationfertig = true;
+        station5bestanden = false;
+        weiterleitung();
+      })
+
+
+
+      $("#ueberspringen").click(function() {
+        uebersprungen = true;
+      });
+
+
+    });
+
+    function weiterleitung() {
+
+      
+
+      if (pauseset == true) {
+        pause();
+      } else {
+        seite+=1;
+       switch(seite) {
+        case 2:
+          seite2();
+          break;
+        case 3:
+          seite3();
+          break;
+        case 4:
+          seite4();
+          break;
+        case 5:
+          seite5();
+          break;
+        case 6:
+          ende();
+          break;
+       }       
+      }
+    }
+
+    function pause() {
+
+      $("#station1").hide();
+      $("#station2").hide();
+      $("#station3").hide();
+      $("#station4").hide();
+      $("#station5").hide();
+
+      $("#pause").show();
+
+      $("#naechstestation").text("Nächste Station: " + (seite+1));
+
+      uebersprungen = false;
+
+      if (verbleibendezeit > 0) {
+
+        pausenzeit = verbleibendezeit;
+        
+        setInterval(function() {
+            pausenzeit = pausenzeit -1;
+
+            if (pausenzeit < 0 || uebersprungen == true) {
+              pauseset = false;
+              uebersprungen = false;
+              weiterleitung();
+              return;
+            }
+            $('#pausenzeit').text("Verbleibende Zeit: " + get_elapsed_time_string(verbleibendezeit));
+          }, 1000);
+      
+        // while loop with delay
+/*
+        while(true) {
+            
+            if (pausenzeit < 0 || uebersprungen == true) {
+                return;
+              }
+            sleep(1000);
+        }*/
+
+
+        console.log("while loop escaped");
+      }
+    }
+
+    function seite2() {
+      $("#pause").hide();
+      $("#station2").show();
+      $(".bestanden").show();
+
+      verbleibendezeit = 210;
+      stationfertig = false;
+
+      pauseset = true;
+
+      console.log("seite 2");
+    }
+
+    function seite3() {
+      $("#pause").hide();
+      $("#station3").show();
+      $(".bestanden").show();
+      verbleibendezeit = 120;
+      stationfertig = false;
+
+      pauseset = true;
+
+      console.log("seite 3");
+    }  
+    
+    function seite4() {
+      $("#pause").hide();
+      $("#station4").show();
+      $(".bestanden").show();
+      verbleibendezeit = 180;
+      stationfertig = false;
+      
+      pauseset = true;
+
+      console.log("seite 4");
+    }  
+
+    function seite5() {
+      $("#pause").hide();
+      $("#station5").show();
+      $(".bestanden").show();
+      verbleibendezeit = 120;
+      stationfertig = false;
+
+      pauseset = false;
+
+      console.log("seite 5");
+    }
+
+    function ende() {
+      $("#station5").hide();
+
+      $("#ende").show();
+
+      $(".Timer").hide();
+      $(".hideme").hide();
+
+      console.log("ende");
+
+      if (station1bestanden == true) {
+        $("#station1ja").show();
+      } else {
+        $("#station1nein").show();
+      }
+
+      if (station2bestanden == true) {
+        $("#station2ja").show();
+      } else {
+        $("#station2nein").show();
+      }
+
+      if (station3bestanden == true) {
+        $("#station3ja").show();
+      } else {
+        $("#station3nein").show();
+      }
+
+      if (station4bestanden == true) {
+        $("#station4ja").show();
+      } else {
+        $("#station4nein").show();
+      }
+
+      if (station5bestanden == true) {
+        $("#station5ja").show();
+      } else {
+        $("#station5nein").show();
+      }
+
+      if (elapsed_seconds <= 870) {
+        $("#zeitlimitja").show();
+      } else {
+        $("#zeitlimitnein").show();
+      }        
+
+
+
+      console.log(austragungsortplusdatum);
+    }
+
+
+
+function get_elapsed_time_string(total_seconds) {
+            function pretty_time_string(num) {
+              return ( num < 10 ? "0" : "" ) + num;
+            }
+
+            var hours = Math.floor(total_seconds / 3600);
+            total_seconds = total_seconds % 3600;
+
+            var minutes = Math.floor(total_seconds / 60);
+            total_seconds = total_seconds % 60;
+
+            var seconds = Math.floor(total_seconds);
+
+            // Pad the minutes and seconds with leading zeros, if required
+            hours = pretty_time_string(hours);
+            minutes = pretty_time_string(minutes);
+            seconds = pretty_time_string(seconds);
+
+            // Compose the string for display
+            var currentTimeString = minutes + "min " + seconds + "sec";
+
+            return currentTimeString;
+          }
+
+var sleepSetTimeout_ctrl;
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+  </script>
+</html>

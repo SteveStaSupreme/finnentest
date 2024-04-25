@@ -1,0 +1,67 @@
+h1 {
+  text-align: center;
+}
+
+.warnung {
+  color: #ff0000;
+}
+
+.box {
+  border: 2px solid #0000ff;
+  padding: 10px;
+}
+
+.bestanden {
+  border: none;
+  background-color: #008000;
+}
+
+.nichtbestanden {
+  border: none;
+  background-color: #ff0000;
+}
+
+.logo {
+  float: right;
+  width: 100px;
+  height: 100px;
+}
+
+#noelfv {
+  float: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+#ende {
+  padding: 30px;
+}
+
+th {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+
+td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: center;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.imagecenter {
+  margin: auto;
+  width: 35px;
+  height: 35px;
+}
