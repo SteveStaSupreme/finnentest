@@ -59,7 +59,7 @@
             <p class="stationszeit"></p>
 
             <button class="bestanden" id="bestanden1">Bestanden</button>
-            <button id="nichtbestanden1">Nicht bestanden</button>
+            <button class="nichtbestanden" id="nichtbestanden1">Nicht bestanden</button>
 
         </div>
 
@@ -70,7 +70,7 @@
             <p class="stationszeit"></p>
 
             <button class="bestanden" id="bestanden2">Bestanden</button>
-            <button id="nichtbestanden2">Nicht bestanden</button>
+            <button class="nichtbestanden" id="nichtbestanden2">Nicht bestanden</button>
 
         </div>
 
@@ -81,7 +81,7 @@
             <p class="stationszeit"></p>
 
             <button class="bestanden" id="bestanden3">Bestanden</button>
-            <button id="nichtbestanden3">Nicht bestanden</button>
+            <button class="nichtbestanden" id="nichtbestanden3">Nicht bestanden</button>
 
         </div>
 
@@ -92,7 +92,7 @@
             <p class="stationszeit"></p>
 
             <button class="bestanden" id="bestanden4">Bestanden</button>
-            <button id="nichtbestanden4">Nicht bestanden</button>
+            <button class="nichtbestanden" id="nichtbestanden4">Nicht bestanden</button>
 
         </div>
 
@@ -103,7 +103,7 @@
             <p class="stationszeit"></p>
 
             <button class="bestanden" id="bestanden5">Bestanden</button>
-            <button id="nichtbestanden5">Nicht bestanden</button>
+            <button class="nichtbestanden" id="nichtbestanden5">Nicht bestanden</button>
 
         </div>
 
@@ -244,7 +244,8 @@
                     feuerwehr != "" &&
                     standesbuchnummer != "" &&
                     austragungsortplusdatum != "") {
-
+                    
+                    $(".warnung").hide();
                     $("#formular").hide();
                     $("body").prepend("<p class='Timer'></p>")
                     $("body").prepend("<p class='hideme'>" + nachname + " " + vorname + ", " + standesbuchnummer + "</p>");
